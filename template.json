@@ -47,6 +47,7 @@
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_url": "{{user `iso_url`}}",
       "shutdown_command": "echo 'vagrant' | sudo -S poweroff",
+      "post_shutdown_delay": "2m",
       "ssh_password": "{{user `ssh_username`}}",
       "ssh_username": "{{user `ssh_password`}}",
       "ssh_wait_timeout": "20m",
