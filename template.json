@@ -62,6 +62,12 @@
         [
           "modifyvm",
           "{{.Name}}",
+          "--natpf1",
+          "guest_80,tcp,,8080,,80"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
           "--cpus",
           "{{user `build_cpu_cores`}}"
         ]
