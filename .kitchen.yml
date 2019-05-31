@@ -1,0 +1,24 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: shell
+
+platforms:
+  - name: vbox/nginx64
+    driver:
+      box: nginx64
+      provider: virtualbox
+  - name: vmware/nginx64
+    driver:
+      box: nginx64
+      provider: vmware_desktop
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
+    excludes:
+    - vmware/nginx64
