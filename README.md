@@ -7,7 +7,22 @@ Based on the following repository:
 
 # How to build
 
-    packer build template.json
+    make
+    
+Using the supplied makefile should automatically detect your OS environment and build the image correctly.
+If that doesn't work, you can specify which provider to use to build the image:
+
+    make nginx64-vbox.box # when using virtualbox
+    make nginx64-vmware.box # when using vmware
+
+# How to test
+
+    make kitchen
+    
+Just like with building, you can specify which provider to use with your tests:
+
+    make kitchen-vbox
+    make kitchen-vmware
 
 # Purpose
 
@@ -15,4 +30,4 @@ This repository attempts to store the minimum amount of code that is required to
 - Ubuntu Xenial64 box
 - with standard nginx
 - using Packer
-- for VirtualBox
+- for VirtualBox or VMware
